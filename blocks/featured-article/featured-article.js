@@ -39,6 +39,7 @@ export default async function decorate($block) {
   // find metadata
   const title = getMetadata('og:title', doc);
   const desc = getMetadata('og:description', doc);
+  const author = getMetadata('author', doc);
 
   const $pre = document.createElement('p');
   $pre.classList.add('pretitle');
@@ -46,6 +47,9 @@ export default async function decorate($block) {
 
   const $h2 = document.createElement('h2');
   $h2.textContent = title;
+
+  const $a = document.createElement('a');
+$a.textContent = "by: " + author;
 
   const $p = document.createElement('p');
   $p.textContent = desc;
