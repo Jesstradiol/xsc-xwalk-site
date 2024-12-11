@@ -1,4 +1,7 @@
 /* block specific CSS goes here */
+main .hero h1 {
+    font-size: 75px;
+}
 
 main .hero-container > div {
     max-width: unset;
